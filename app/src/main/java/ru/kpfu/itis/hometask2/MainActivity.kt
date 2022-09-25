@@ -1,9 +1,8 @@
-package ru.kpfu.itis.hometask1
+package ru.kpfu.itis.hometask2
 
-import android.os.Bundle
-import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
-import ru.kpfu.itis.hometask1.databinding.ActivityMainBinding
+import android.os.Bundle
+import ru.kpfu.itis.hometask2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
@@ -11,19 +10,16 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
         if (savedInstanceState == null) {
-            val fragment = MenuFragment.getInstance()
+            val fragment = RegistrationFragment.getInstance()
             supportFragmentManager
                 .beginTransaction()
-                .add(R.id.fragment_container, fragment, MenuFragment.MENU_FRAGMENT_TAG)
+                .add(R.id.fragment_container, fragment, RegistrationFragment.REGISTRATION_FRAGMENT_TAG)
                 .commit()
         }
-
-
     }
 
     override fun onDestroy() {
@@ -32,9 +28,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     }
 
     companion object {
-        val fragmentsContainerId: Int = R.id.fragment_container
-        fun getInstance() = MainActivity()
+        const val fragmentsContainerId: Int = R.id.fragment_container
     }
-
 
 }
