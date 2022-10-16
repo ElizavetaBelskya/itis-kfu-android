@@ -14,10 +14,13 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         setContentView(binding?.root)
 
         if (savedInstanceState == null) {
-            val fragment = RegistrationFragment.getInstance()
+            val fragment = RecyclerFragment.getInstance()
             supportFragmentManager
                 .beginTransaction()
-                .add(R.id.fragment_container, fragment, RegistrationFragment.REGISTRATION_FRAGMENT_TAG)
+                .add(
+                    R.id.fragment_container, fragment,
+                    RecyclerFragment.RECYCLER_FRAGMENT_TAG
+                )
                 .commit()
         }
     }
