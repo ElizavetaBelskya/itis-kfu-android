@@ -1,11 +1,10 @@
-package ru.kpfu.itis.hometask2
+package ru.kpfu.itis.hometask4
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import ru.kpfu.itis.hometask2.databinding.ActivityMainBinding
+import ru.kpfu.itis.hometask4.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity(R.layout.activity_main) {
-
+class MainActivity : AppCompatActivity() {
     private var binding: ActivityMainBinding? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,8 +29,5 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         binding = null
     }
 
-    companion object {
-        const val fragmentsContainerId: Int = R.id.fragment_container
-    }
 
 }

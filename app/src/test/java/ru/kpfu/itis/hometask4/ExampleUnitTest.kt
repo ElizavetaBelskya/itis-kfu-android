@@ -1,4 +1,4 @@
-package ru.kpfu.itis.hometask2
+package ru.kpfu.itis.hometask4
 
 import org.junit.Test
 

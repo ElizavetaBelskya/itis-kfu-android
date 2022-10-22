@@ -1,4 +1,4 @@
-package ru.kpfu.itis.hometask2
+package ru.kpfu.itis.hometask4
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,65 +7,58 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import ru.kpfu.itis.hometask2.databinding.FragmentRecyclerBinding
+import com.bumptech.glide.Glide
+import ru.kpfu.itis.hometask4.databinding.FragmentRecyclerBinding
 
 class RecyclerFragment : Fragment() {
 
     private var binding: FragmentRecyclerBinding? = null
-    private var recyclerAdapter: TypeViewHolderAdapter? = null
-
+    private var recyclerAdapter: ElementViewHolderAdapter? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentRecyclerBinding.inflate(inflater, container, false)
-        initAdapter()
         return binding?.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initAdapter()
+    }
 
     private fun initAdapter() {
-        recyclerAdapter = TypeViewHolderAdapter().apply {
-            itemsList = TypesRepository.itemsList
-            onClick = ::onClickListener
+        if (recyclerAdapter == null) {
+            recyclerAdapter = binding?.root?.context?.let { Glide.with(it) }?.let {
+                ElementViewHolderAdapter().apply {
+                    itemsList = ListRepository.itemsList
+                    glide = it
+                }
+            }
         }
-
         val recyclerManager = LinearLayoutManager(requireContext(), RecyclerView.VERTICAL, false)
         binding?.textItemsRv?.apply {
             layoutManager = recyclerManager
             adapter = recyclerAdapter
         }
-
     }
 
-    private fun onClickListener(position: Int) {
-        recyclerAdapter?.itemsList?.get(position)?.isClicked = true
-        recyclerAdapter?.notifyItemChanged(position)
-        val item = TypesRepository.itemsList[position]
-        parentFragmentManager.beginTransaction()
-            .replace(
-                MainActivity.fragmentsContainerId,
-                DescriptionFragment.getInstance(item.name, item.description, item.pathToImage),
-                DescriptionFragment.DESCRIPTION_FRAGMENT_TAG
-            )
-            .addToBackStack(null)
-            .commit()
-    }
 
     override fun onDestroyView() {
+        super.onDestroyView()
         binding?.textItemsRv?.adapter = null
         recyclerAdapter = null
-        binding = null
-        super.onDestroyView()
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        binding = null
+    }
 
     companion object {
-        const val RECYCLER_FRAGMENT_TAG = "REGISTRATION_FRAGMENT_TAG"
+        const val RECYCLER_FRAGMENT_TAG = "RECYCLER_FRAGMENT_TAG"
         @JvmStatic
         fun getInstance() = RecyclerFragment()
-
     }
-
 }

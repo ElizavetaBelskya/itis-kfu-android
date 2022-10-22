@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Hometask2</string>
+    <string name="app_name">hometask4</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="click_here_btn">Click here</string>
+    <string name="rv_recently">You recently listened to</string>
 </resources>
