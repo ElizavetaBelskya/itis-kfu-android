@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/firstFragment"
+        android:title="@string/first_fragment"
+        android:icon="@drawable/ic_baseline_lens_24"/>
+
+    <item android:id="@+id/secondFragment"
+        android:title="@string/second_fragment"
+        android:icon="@drawable/ic_baseline_insert_chart_24"/>
+
+    <item android:id="@+id/thirdFragment"
+        android:title="@string/third_fragment"
+        android:icon="@drawable/ic_baseline_horizontal_rule_24"/>
+
+    <item android:id="@+id/fourthFragment"
+        android:title="@string/fourth_fragment"
+        android:icon="@drawable/ic_baseline_arrow_upward_24"
+        />
+
+</menu>

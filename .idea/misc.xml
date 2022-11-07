@@ -3,11 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Elizaveta/AndroidStudioProjects/hometask4/app/src/main/res/layout/activity_main.xml" value="0.259375" />
-        <entry key="..\:/Users/Elizaveta/AndroidStudioProjects/hometask4/app/src/main/res/layout/fragment_recycler.xml" value="0.259375" />
-        <entry key="..\:/Users/Elizaveta/AndroidStudioProjects/hometask4/app/src/main/res/layout/rv_item_first_type.xml" value="0.264" />
-        <entry key="..\:/Users/Elizaveta/AndroidStudioProjects/hometask4/app/src/main/res/layout/rv_item_second_type.xml" value="0.259375" />
-        <entry key="..\:/Users/Elizaveta/AndroidStudioProjects/hometask4/app/src/main/res/layout/rv_item_third_type.xml" value="0.259375" />
+        <entry key="..\:/Users/Elizaveta/AndroidStudioProjects/hometask5/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Elizaveta/AndroidStudioProjects/hometask5/app/src/main/res/layout/fragment_bottom_sheet.xml" value="0.259375" />
+        <entry key="..\:/Users/Elizaveta/AndroidStudioProjects/hometask5/app/src/main/res/layout/fragment_botton_sheet.xml" value="0.259375" />
+        <entry key="..\:/Users/Elizaveta/AndroidStudioProjects/hometask5/app/src/main/res/layout/fragment_first.xml" value="0.1" />
+        <entry key="..\:/Users/Elizaveta/AndroidStudioProjects/hometask5/app/src/main/res/layout/fragment_first2.xml" value="0.259375" />
+        <entry key="..\:/Users/Elizaveta/AndroidStudioProjects/hometask5/app/src/main/res/layout/fragment_first3.xml" value="0.259375" />
+        <entry key="..\:/Users/Elizaveta/AndroidStudioProjects/hometask5/app/src/main/res/layout/fragment_fourth.xml" value="0.259375" />
+        <entry key="..\:/Users/Elizaveta/AndroidStudioProjects/hometask5/app/src/main/res/layout/fragment_second.xml" value="0.2" />
+        <entry key="..\:/Users/Elizaveta/AndroidStudioProjects/hometask5/app/src/main/res/layout/fragment_second2.xml" value="0.259375" />
+        <entry key="..\:/Users/Elizaveta/AndroidStudioProjects/hometask5/app/src/main/res/layout/fragment_third.xml" value="0.259375" />
+        <entry key="..\:/Users/Elizaveta/AndroidStudioProjects/hometask5/app/src/main/res/layout/fragment_third2.xml" value="0.259375" />
+        <entry key="..\:/Users/Elizaveta/AndroidStudioProjects/hometask5/app/src/main/res/layout/fragment_third3.xml" value="0.1" />
+        <entry key="..\:/Users/Elizaveta/AndroidStudioProjects/hometask5/app/src/main/res/layout/item.xml" value="0.259375" />
+        <entry key="..\:/Users/Elizaveta/AndroidStudioProjects/hometask5/app/src/main/res/menu/main_menu.xml" value="0.1" />
       </map>
     </option>
   </component>

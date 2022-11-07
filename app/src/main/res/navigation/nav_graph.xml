@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="ru.kpfu.itis.hometask5.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            app:popUpTo="@id/nav_graph"
+            android:id="@+id/action_firstFragment_to_firstFragment2"
+            app:destination="@id/firstFragment2" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/firstFragment2"
+        android:name="ru.kpfu.itis.hometask5.FirstFragment2"
+        android:label="fragment_first2"
+        tools:layout="@layout/fragment_first2" >
+        <action
+            app:popUpTo="@id/nav_graph"
+            android:id="@+id/action_firstFragment2_to_firstFragment3"
+            app:destination="@id/firstFragment3" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/firstFragment3"
+        app:popUpTo="@id/nav_graph"
+        android:name="ru.kpfu.itis.hometask5.FirstFragment3"
+        android:label="fragment_first3"
+        tools:layout="@layout/fragment_first3" />
+
+
+    <dialog
+        android:id="@+id/fourthFragment"
+        android:name="ru.kpfu.itis.hometask5.BottomSheetFragment"
+        android:label="fragment_fourth"
+        tools:layout="@layout/fragment_bottom_sheet" >
+
+        <action
+            android:id="@+id/action_fourthFragment_to_firstFragment3"
+            app:destination="@id/firstFragment3" />
+        <action
+            android:id="@+id/action_fourthFragment_to_secondFragment2"
+            app:destination="@id/secondFragment2" />
+        <action
+            android:id="@+id/action_fourthFragment_to_thirdFragment2"
+            app:destination="@id/thirdFragment2" />
+    </dialog>
+
+
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="ru.kpfu.itis.hometask5.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_secondFragment_to_secondFragment2"
+            app:destination="@id/secondFragment2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="ru.kpfu.itis.hometask5.ThirdFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" >
+        <action
+            android:id="@+id/action_thirdFragment_to_thirdFragment2"
+            app:destination="@id/thirdFragment2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/secondFragment2"
+        android:name="ru.kpfu.itis.hometask5.SecondFragment2"
+        android:label="fragment_second2"
+        tools:layout="@layout/fragment_second2" />
+    <fragment
+        android:id="@+id/thirdFragment2"
+        android:name="ru.kpfu.itis.hometask5.ThirdFragment2"
+        android:label="fragment_third2"
+        tools:layout="@layout/fragment_third2" >
+        <action
+            android:id="@+id/action_thirdFragment2_to_thirdFragment3"
+            app:destination="@id/thirdFragment3" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/thirdFragment3"
+        android:name="ru.kpfu.itis.hometask5.ThirdFragment3"
+        android:label="fragment_third3"
+        tools:layout="@layout/fragment_third3" />
+
+</navigation>

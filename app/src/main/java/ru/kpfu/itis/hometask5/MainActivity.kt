@@ -1,8 +1,10 @@
-package ru.kpfu.itis.hometask4
+package ru.kpfu.itis.hometask5
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import ru.kpfu.itis.hometask4.databinding.ActivityMainBinding
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
+import ru.kpfu.itis.hometask5.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private var binding: ActivityMainBinding? = null
@@ -12,16 +14,15 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
-        if (savedInstanceState == null) {
-            val fragment = RecyclerFragment.getInstance()
-            supportFragmentManager
-                .beginTransaction()
-                .add(
-                    R.id.fragment_container, fragment,
-                    RecyclerFragment.RECYCLER_FRAGMENT_TAG
-                )
-                .commit()
+
+        val controller = (supportFragmentManager.findFragmentById(R.id.container) as
+                NavHostFragment).navController
+
+        binding?.apply {
+            bottomMenu.setupWithNavController(controller)
         }
+
+
     }
 
     override fun onDestroy() {
