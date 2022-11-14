@@ -139,6 +139,11 @@ class MainFragment : Fragment() {
 
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        binding = null
+    }
+
     companion object {
         const val MAIN_FRAGMENT_TAG = "MAIN_FRAGMENT_TAG"
         const val TITLE = "TITLE"
