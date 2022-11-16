@@ -23,8 +23,9 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".MyBroadcastReceiver"
-            android:exported="true"/>
+        <receiver android:name=".MyBroadcastReceiver" android:exported="true"/>
+
+        <receiver android:name=".AirplaneModeReceiver" android:exported="true"/>
 
     </application>
 

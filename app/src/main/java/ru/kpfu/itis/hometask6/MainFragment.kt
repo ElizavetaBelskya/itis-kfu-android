@@ -35,19 +35,10 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-
-
         binding?.apply {
 
             if (isAirplaneModeOn(requireContext())) {
-                etTitle.isEnabled = false
-                etShortMessage.isEnabled = false
-                etLongMessage.isEnabled = false
-                etTime.isEnabled = false
-                checkBox.isEnabled = false
-                btnCreate.isEnabled = false
-                btnCancel.isEnabled = false
-                btnShowTime.isEnabled = false
+                makeNonEnabled()
             }
 
             checkBox.setOnCheckedChangeListener {
@@ -103,6 +94,11 @@ class MainFragment : Fragment() {
 
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        binding = null
+    }
+
     private fun isReadyToCreateNotification() {
         binding?.apply {
             btnCreate.isEnabled =
@@ -139,10 +135,34 @@ class MainFragment : Fragment() {
 
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        binding = null
+    fun makeEnabled() {
+        binding?.apply {
+            etTitle.isEnabled = true
+            etShortMessage.isEnabled = true
+            etLongMessage.isEnabled = checkBox.isChecked
+            etTime.isEnabled = true
+            checkBox.isEnabled = true
+            btnCancel.isEnabled = true
+            btnShowTime.isEnabled = true
+            btnCreate.isEnabled =  !(etTitle.text.isNullOrEmpty() || etShortMessage.text.isNullOrEmpty() || etTime.text.isNullOrEmpty())
+        }
     }
+
+
+
+    fun makeNonEnabled() {
+        binding?.apply {
+            etTitle.isEnabled = false
+            etShortMessage.isEnabled = false
+            etLongMessage.isEnabled = false
+            etTime.isEnabled = false
+            checkBox.isEnabled = false
+            btnCreate.isEnabled = false
+            btnCancel.isEnabled = false
+            btnShowTime.isEnabled = false
+        }
+    }
+
 
     companion object {
         const val MAIN_FRAGMENT_TAG = "MAIN_FRAGMENT_TAG"
