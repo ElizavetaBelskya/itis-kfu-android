@@ -1,5 +1,21 @@
 <resources>
-    <string name="app_name">Hometask6</string>
+    <string name="app_name">Hometask7</string>
+    <string name="acces_denied">Access denied</string>
+    <string name="cam_dialog_title">You have declined permission to use the camera</string>
+    <string name="cam_dialog_message">This permission is needed in order to access the camera. Can you still grant access?</string>
+    <string name="open_scanner">Open scanner</string>
+    <string name="open_camera">Open camera</string>
+    <string name="cancelled_message">Cancelled</string>
+    <string name="sorted_id_asc">Sorted by id ascending</string>
+    <string name="sorted_by_id_desc">Sorted by id descending</string>
+    <string name="sorted_title_asc">Sorted by title ascending</string>
+    <string name="sorted_title_desc">Sorted by title descending</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="not_sorted_id">Not sorted by id</string>
+    <string name="not_sorted_title">Not sorted by title</string>
+    <string name="sorted_id">Sorted by id</string>
+    <string name="sorted_title">Sorted by title</string>
+
+
 </resources>
