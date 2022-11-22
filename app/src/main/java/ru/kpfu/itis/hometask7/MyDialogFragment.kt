@@ -86,6 +86,11 @@ class MyDialogFragment() : BottomSheetDialogFragment() {
         }
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        binding = null
+    }
+
 
     companion object {
         const val REQUEST_KEY = "request"
