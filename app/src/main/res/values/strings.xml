@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Hometask6</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="acces_denied">Access denied</string>
+    <string name="dialog_title">You have decline permission to use location</string>
+    <string name="dialog_message_location">This permission is needed in order to access location. Can you still grant access?</string>
+</resources>
